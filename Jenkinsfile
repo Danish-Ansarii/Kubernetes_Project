@@ -1,6 +1,6 @@
 node{
     stage("git checkout"){
-        git url:https://github.com/Danish-Ansarii/Kubernetes_Project.git
+        git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Danish-Ansarii/Kubernetes_Project.git'
     }
 }
 

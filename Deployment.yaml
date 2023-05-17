@@ -21,4 +21,4 @@ spec:
             - name: photoappport
               containerPort: 80
               protocol: TCP
-
+ 

@@ -5,6 +5,6 @@
 
   tasks:
     - name: run Deployment
-      command: kubectl apply -f Deployment.yaml
+      command: kubectl apply -f /home/ubuntu/Deployment.yaml
     - name: run Deployment
-      command: kubectl apply -f Service.yaml
+      command: kubectl apply -f /home/ubuntu/Service.yaml

@@ -40,7 +40,14 @@ node {
 
       }  
    }
-    
+    stage('Run playbook in ansible'){
+      sshagent(['k8s']) {
+      sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.12.106'
+      sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.12.106 ansible-playbook /home/ubuntu/ansible.yml'
+      
+
+      }  
+   }
 
 
 

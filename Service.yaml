@@ -4,7 +4,6 @@ metadata:
   name:  svc
 spec:
   selector:
-    matchLabels:
       app: photogenic
   ports:
     - name: svcport

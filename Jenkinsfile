@@ -34,9 +34,9 @@ node {
 
    stage('Senf Docker file to k8s Cluster'){
       sshagent(['dani']) {
-      sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.15.177'
-      sh 'scp /var/lib/jenkins/workspace/pipeline/* ubuntu@172.31.15.177:/home/ubuntu'
-      sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.15.177 whoami'
+      sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.199.199.7'
+      sh 'scp /var/lib/jenkins/workspace/pipeline/* ubuntu@54.199.199.7:/home/ubuntu'
+      sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.199.199.7 whoami'
       }      
    }      
      

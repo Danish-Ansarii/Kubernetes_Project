@@ -5,6 +5,6 @@
 
   tasks:
     - name: run Deployment
-      command: minikube kubectl apply -- -f /home/ubuntu/Deployment.yaml
+      command: kubectl apply -f /home/ubuntu/Deployment.yaml
     - name: run Deployment
-      command: minikube kubectl apply -- -f /home/ubuntu/Service.yaml
+      command: kubectl apply -f /home/ubuntu/Service.yaml

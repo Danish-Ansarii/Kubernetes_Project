@@ -19,6 +19,6 @@ spec:
           image: danish84464/pipeline
           ports:
             - name: photoappport
-              containerPort: 80
+              containerPort: 8080
               protocol: TCP
  

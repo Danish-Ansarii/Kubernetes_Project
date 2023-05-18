@@ -1,8 +1,10 @@
 ---
+- name: Deployment Playbook
   hosts: all
-  become: true
+  become: yes  # Optional, run tasks with sudo or root privileges
+
   tasks:
-    - name: Run Deployment
+    - name: run Deployment
       command: kubectl apply -f /home/ubuntu/Deployment.yaml
-    - name: Run Service
-      command: kubectl apply -f /home/ubuntu/Service.yaml 
+    - name: run Deployment
+      command: kubectl apply -f /home/ubuntu/Service.yaml

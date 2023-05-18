@@ -33,7 +33,7 @@ node {
    }
 
    stage('Senf Docker file to k8s Cluster'){
-      sshagent(['dani']) {
+      sshagent(['k8s']) {
       sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.199.199.7'
       sh 'scp /var/lib/jenkins/workspace/pipeline/* ubuntu@54.199.199.7:/home/ubuntu'
       sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.199.199.7 whoami'
@@ -42,7 +42,7 @@ node {
      
 
     stage('Run playbook in ansible'){
-      sshagent(['dani']) {
+      sshagent(['k8s']) {
       sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.168.49.173'
       sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.168.49.173 ansible -m ping node'
       sh 'ssh -o StrictHostKeyChecking=no ubuntu@54.168.49.173 sudo ansible-playbook /home/ubuntu/ansible.yml'
